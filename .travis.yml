@@ -13,14 +13,11 @@ env:
     - TEST_DIR=/tmp/test_dir/
     - MODULE=hdbscan
   matrix:
-    include: 
-      -os: linux
-       arch: ppc64le
-       dist: bionic
-       python: '3.7'
-       NUMPY_VERSION: "1.15.3" 
-       SCIPY_VERSION: "1.2.1" 
-       CYTHON_VERSION: "0.28.5"
+     -os: linux
+      arch: ppc64le
+      - DISTRIB="conda" PYTHON_VERSION="3.7"
+      NUMPY_VERSION="1.15.3" SCIPY_VERSION="1.2.1" CYTHON_VERSION="0.28.5"
+  
    
 install: source ci_scripts/install.sh
 script: bash ci_scripts/test.sh

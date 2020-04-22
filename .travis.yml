@@ -16,8 +16,11 @@ env:
     include:
       -os: linux
        arch: ppc64le
-    - DISTRIB="conda" PYTHON_VERSION="3.7"
-      NUMPY_VERSION="1.15.3" SCIPY_VERSION="1.2.1" CYTHON_VERSION="0.28.5"
+       python: 3.7
+      # - DISTRIB="conda"
+       NUMPY_VERSION: "1.15.3" 
+       SCIPY_VERSION: "1.2.1" 
+       CYTHON_VERSION: "0.28.5"
   
    
 install: source ci_scripts/install.sh
